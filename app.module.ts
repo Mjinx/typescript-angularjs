@@ -1,9 +1,9 @@
 import angular from "angular";
 import "@uirouter/angularjs";
 
-import aName from "./a";
+import aModuleName from "./aModule";
 import appConfig from "./app.config";
 
-const app = angular.module("testApp", ["ui.router", aName]);
+const app = angular.module("testApp", ["ui.router", aModuleName]);
 
 appConfig(app);

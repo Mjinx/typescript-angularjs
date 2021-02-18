@@ -4,7 +4,7 @@ import {
   Ng1StateDeclaration
 } from "@uirouter/angularjs";
 
-import { aComponentName } from "./a/a.component";
+import { aComponentName } from "./aModule/a.component";
 
 export const routes: { [key: string]: string } = {
   root: "hello"
