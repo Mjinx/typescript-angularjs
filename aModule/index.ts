@@ -3,9 +3,9 @@ import angular from "angular";
 import registerComonentA from "./a.component";
 import registerDirectiveA from "./a.directive";
 
-const a = angular.module("a", []);
+const aModule = angular.module("a", []);
 
-registerComonentA(a);
-registerDirectiveA(a);
+registerComonentA(aModule);
+registerDirectiveA(aModule);
 
-export default a.name;
+export default aModule.name;
