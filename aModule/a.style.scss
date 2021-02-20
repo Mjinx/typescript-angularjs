@@ -1,17 +1,23 @@
-//@import "../styles/_style.variables";
+@import "../styles/_style.variables";
 
 $bg-colour: purple !default;
 
 a-component {
   display: flex;
   flex-direction: column;
-  padding: $padding;
+  padding: $padding * 2;
   background-color: darken($bg-colour, 10%);
 
   > * {
-    margin-bottom: 0.3rem;
+    margin-bottom: $margin;
   }
-  h1 {
-    text-transform: uppercase;
+
+  label {
+    display: inline-block;
+    margin-bottom: $margin / 2;
+  }
+
+  input {
+    display: block;
   }
 }

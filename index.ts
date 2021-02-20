@@ -1,4 +1,4 @@
-//import "./styles/style.scss";
+import "./styles/style.scss";
 import "./app.module";
 
 import angular from "angular";

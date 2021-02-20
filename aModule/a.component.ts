@@ -1,5 +1,5 @@
 import ng from "angular";
-//import "./a.style";
+import "./a.style";
 
 class AComponentController implements ng.IController {
   public input: string;

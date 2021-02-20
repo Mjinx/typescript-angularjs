@@ -1,3 +1,8 @@
-<h1>Im A Component</h1>
-<input type="text" ng-model="vm.input"></input>
-<div a-directive="vm.input"></div>
+<h1>A Component</h1>
+
+<div>
+	<label for="component-binding">Just an input</label>
+	<input id="component-binding" type="text" ng-model="vm.input"></input>
+</div>
+
+<span a-directive="vm.input"></span>
