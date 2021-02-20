@@ -1,6 +1,5 @@
 import ng from "angular";
 import "./a.style.scss";
-import template from "./a.template.html";
 
 class AComponentController implements ng.IController {
   public input: string;
@@ -21,10 +20,8 @@ export const aComponentName = "aComponent";
 
 export default function registerComponent(module: ng.IModule) {
   module.component(aComponentName, {
-    //template: "<span>{{ vm.input | json}}</span>",
-    //templateUrl: require('./a.component.html'),
-    //templateUrl: "./a/a.template.html",
-    template,
+    //templateUrl: "./aModule/a.template.html", //NOPE
+    template: require<string>("./a.template.html"), //or import template from "./a.template.html";
     controller: AComponentController,
     controllerAs: "vm"
   });

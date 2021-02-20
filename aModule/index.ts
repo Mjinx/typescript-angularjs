@@ -7,4 +7,5 @@ const a = angular.module("a", []);
 
 registerComonentA(a);
 registerDirectiveA(a);
+
 export default a.name;
