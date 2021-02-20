@@ -1,17 +1,14 @@
 import ng from "angular";
-import "./a.style.scss";
+//import "./a.style";
 
 class AComponentController implements ng.IController {
   public input: string;
 
   public static $inject: string[] = [];
 
-  constructor() {
-    console.log("a ctor");
-  }
-  public $onInit(): void {
-    console.log("a $onInit");
+  constructor() {}
 
+  public $onInit(): void {
     this.input = "hi there!";
   }
 }
