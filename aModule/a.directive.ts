@@ -33,7 +33,7 @@ function aDirective<T>($parse: ng.IParseService): ng.IDirective {
         if (expression) instanceElement.html(`${expression}`);
       };
     }
-  } as ng.IDirective;
+  };
 }
 
 aDirective.$inject = ["$parse"];
