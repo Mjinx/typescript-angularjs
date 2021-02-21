@@ -4,9 +4,7 @@ interface IDirectiveAttribute extends ng.IAttributes {
   aDirective: string;
 }
 
-const aDirective: ng.IDirectiveFactory<ng.IScope> = <T>(
-  $parse: ng.IParseService
-) => {
+function aDirective<T>($parse: ng.IParseService): ng.IDirective {
   return {
     restrict: "A",
     compile: (
@@ -16,7 +14,7 @@ const aDirective: ng.IDirectiveFactory<ng.IScope> = <T>(
     ) => {
       const getExpression = $parse(templateAttributes.aDirective);
       return (
-        scope: ng.IRepeatScope,
+        scope: ng.IScope,
         instanceElement: ng.IAugmentedJQuery,
         instanceAttributes: IDirectiveAttribute,
         controller: ng.IController
@@ -28,8 +26,7 @@ const aDirective: ng.IDirectiveFactory<ng.IScope> = <T>(
         scope.$watch(
           templateAttributes.aDirective,
           (newValue: T, oldValue: T) => {
-            if (newValue !== oldValue)
-              instanceElement.html(`${newValue}`);
+            if (newValue !== oldValue) instanceElement.html(`${newValue}`);
           }
         );
 
@@ -37,7 +34,7 @@ const aDirective: ng.IDirectiveFactory<ng.IScope> = <T>(
       };
     }
   } as ng.IDirective;
-};
+}
 
 aDirective.$inject = ["$parse"];
 
