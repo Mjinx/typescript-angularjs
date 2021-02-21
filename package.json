@@ -3,8 +3,14 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
-    "@types/angular": "^1.8.0",
-    "@uirouter/angularjs": "^1.0.29",
-    "angular": "^1.8.2"
+    "@types/angular": "1.8.1",
+    "@types/angular-mocks": "^1.7.0",
+    "@types/jasmine": "3.6.4",
+    "@types/jquery": "^3.5.5",
+    "@uirouter/angularjs": "1.0.29",
+    "angular": "1.8.2",
+    "angular-mocks": "^1.8.2",
+    "jasmine-core": "^3.6.0",
+    "jquery": "^3.5.1"
   }
 }

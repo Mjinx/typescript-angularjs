@@ -29,11 +29,11 @@ const aDirective: ng.IDirectiveFactory<ng.IScope> = <T>(
           templateAttributes.aDirective,
           (newValue: T, oldValue: T) => {
             if (newValue !== oldValue)
-              instanceElement.html(`dir output: ${newValue}`);
+              instanceElement.html(`${newValue}`);
           }
         );
 
-        if (expression) instanceElement.html(`dir output: ${expression}`);
+        if (expression) instanceElement.html(`${expression}`);
       };
     }
   } as ng.IDirective;

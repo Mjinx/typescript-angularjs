@@ -1,24 +1,21 @@
 import ng from "angular";
 import "./a.style";
 
-class AComponentController implements ng.IController {
-  public input: string;
+export class AComponentController implements ng.IController {
+  public input: string = "hi there!";
 
   public static $inject: string[] = [];
 
   constructor() {}
 
-  public $onInit(): void {
-    this.input = "hi there!";
-  }
+  public $onInit(): void {}
 }
 
 export const aComponentName = "aComponent";
 
 export default function registerComponent(module: ng.IModule) {
   module.component(aComponentName, {
-    //templateUrl: "./aModule/a.template.html", //NOPE
-    template: require<string>("./a.template.html"), //or import template from "./a.template.html";
+    template: require<string>("./a.template.html"), //import template from "./a.template.html";
     controller: AComponentController,
     controllerAs: "vm"
   });
